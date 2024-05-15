@@ -30,7 +30,7 @@
 */
 :root {
   /*Variables Button*/
-  --main-background-color: #F0F0F0ff;
+  --main-background-color: rgb(196, 196, 196);
   --main-background-MagicForm: #c2c2c2;
   --main-background-navBar: #d6d6d6;
   --color-select: #1A8921ff;
@@ -39,7 +39,7 @@
   --main-radius:20px;
   --main-radiusInput: 5px;
   --main-color: rgb(29, 29, 29);
-  --body-color:rgb(241, 241, 241);
+  --body-color:rgb(235, 235, 235);
   --main-padding: 15px 32px;
   --main-text-align: center;
   --main-text-decoration: none;
@@ -375,40 +375,6 @@ select:disabled {
 
 .valide { grid-area: valide; }
 
-.adminTable {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: -1;
-  grid-auto-flow: row;
-  grid-template-areas: "nameTable maxTable PositionTable pictureOfTable ValidTable ButtonAdmin";
-  border: 1px solid var(--color-darkGreen);
-  justify-items: center;
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-evenly;
-}
-
-.nameTable { grid-area: nameTable; }
-
-.maxTable { grid-area: maxTable; }
-
-.PositionTable { grid-area: PositionTable; }
-
-.pictureOfTable { grid-area: pictureOfTable; 
-width: 25%;}
-.vignette{
-  width: 10em;
-  border-radius: var(--main-radius);
-}
-.modal {
-  width: 16vw;
-  border-radius: var(--main-radius);
-}
-.ValidTable { grid-area: ValidTable; }
-
-.ButtonAdmin { grid-area: ButtonAdmin; }
 
 
 .indexArticle {
@@ -476,29 +442,6 @@ width: 25%;}
     grid-gap: 5px;
     justify-content: center;
   }
-  .gallery3 {
-    margin: 2vh auto 0;
-    padding: 0 1vw;
-    max-width:100%;
-    display: grid;
-    /*grid-template-columns: repeat(auto-fit, 300px);*/
-    grid-gap: 5px;
-    justify-content: center;
-  }
-  .itemCheckBox {
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
-    min-width: auto;
-    padding: 0.5em;
-    background: var(--color-chair);
-    color: rgb(32, 32, 32);
-    border-radius: var(--main-radiusInput);
-    align-items: center;
-    justify-content: center;
-    border: var(--color-blueOneChair) solid 1px;
-  }
-
 .item {
     min-height: auto;
     min-width: auto;
@@ -511,38 +454,6 @@ width: 25%;}
     justify-content: center;
     border: var(--color-blueOneChair) solid 1px;
   }
-  .galleryReserveTable {
-    margin: 2vh auto 0;
-    padding: 0 1vw;
-    max-width:100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 410px);
-    grid-gap: 5px;
-    justify-content: center;
-  }
-  .itemReserveTable {
-    min-height: auto;
-    min-width: auto;
-    padding: 0.5em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    background: var(--color-chair);
-    color: rgb(32, 32, 32);
-    border-radius: var(--main-radiusInput);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    border: var(--color-blueOneChair) solid 1px;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-}
-.reservedTable{
-  display: inline;
-  text-align: left;
-}
-
-
 /*Variable CSS boutton*/
 
 /*Fin Maitre boutton*/

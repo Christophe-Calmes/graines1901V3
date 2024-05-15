@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : mer. 15 mai 2024 à 13:37
+-- Généré le : mer. 15 mai 2024 à 14:48
 -- Version du serveur : 8.0.36-0ubuntu0.22.04.1
 -- Version de PHP : 8.1.2-1ubuntu2.17
 
@@ -77,7 +77,13 @@ CREATE TABLE `journaux` (
 INSERT INTO `journaux` (`idConnexion`, `ipUser`, `idUser`, `login`, `mdpHacker`, `dateHeure`, `okConnexion`) VALUES
 (1, '::1', 1, 'Admin', '0', '2024-05-13 16:16:17', 1),
 (2, '::1', 1, 'Admin', '0', '2024-05-15 11:15:26', 1),
-(3, '::1', 1, 'Admin', '0', '2024-05-15 13:05:41', 1);
+(3, '::1', 1, 'Admin', '0', '2024-05-15 13:05:41', 1),
+(4, '::1', 0, 'Membre', 'christophe', '2024-05-15 14:32:16', 0),
+(5, '::1', 0, 'Membres', 'Christophe', '2024-05-15 14:32:29', 0),
+(6, '::1', 57, 'Membre', '0', '2024-05-15 14:33:21', 1),
+(7, '::1', 0, 'Membre', 'cristophe', '2024-05-15 14:34:42', 0),
+(8, '::1', 57, 'Membre', '0', '2024-05-15 14:34:51', 1),
+(9, '::1', 1, 'Admin', '0', '2024-05-15 14:38:09', 1);
 
 -- --------------------------------------------------------
 
@@ -151,13 +157,13 @@ INSERT INTO `navigation` (`idNav`, `nomNav`, `cheminNav`, `menuVisible`, `zoneMe
 (72, 'connexion', 'modules/connexion/connexion.php', 1, 0, 10, 0, 1, 0, '924163255021', 1),
 (73, 'inscription', 'modules/users/inscription.php', 0, 0, 0, 0, 1, 0, '3936150651845', 1),
 (74, 'Deconnexion', 'modules/securiter/deconnexion.php', 1, 0, 20, 2, 1, 1, '855837861495', 1),
-(75, 'Deconnexion', 'modules/securiter/deconnexion.php', 1, 0, 20, 2, 1, 0, '8085475761', 1),
+(75, 'Deconnexion', 'modules/securiter/deconnexion.php', 1, 0, 20, 1, 1, 0, '8085475761', 1),
 (76, 'Administration du site', 'modules/navigation/erreurNav.php', 1, 0, 1, 2, 1, 1, '22416555867', 1),
 (77, 'Ajout lien de nav', 'modules/navigation/menuAdmin/creationNouveuMenu.php', 1, 1, 1, 2, 1, 0, '5541000556918843', 1),
 (78, 'Titres et SEO', 'modules/dataSite/titreInfo.php', 1, 1, 2, 2, 1, 0, '20604900566599', 1),
 (81, 'Brassage des liens', 'modules/navigation/menuAdmin/dynamique.php', 1, 1, 2, 2, 1, 0, '9616455148404562', 1),
 (82, 'Ajout menu dÃ©roulant', 'modules/navigation/menuAdmin/ajoutMenuDeroulant.php', 1, 1, 2, 2, 0, 1, '47566064824355818252', 1),
-(85, 'Administration User', 'modules/navigation/erreurNav.php', 1, 0, 0, 2, 1, 6, '13400542441', 1),
+(85, 'Administration User', 'modules/navigation/erreurNav.php', 1, 0, 1, 2, 1, 6, '59863564585357959520', 1),
 (86, 'Users Actif', 'modules/users/administration/droitUser.php', 1, 6, 1, 2, 1, 6, '7099416997', 1),
 (87, 'Route Form', 'modules/navigation/menuAdmin/ajoutRouteForm.php', 1, 1, 2, 2, 1, 0, '64965184445975', 1),
 (88, 'Users Anciens ', 'modules/users/administration/droitUserNonValide.php', 1, 6, 2, 2, 1, 0, '93444679269', 1),
@@ -170,13 +176,17 @@ INSERT INTO `navigation` (`idNav`, `nomNav`, `cheminNav`, `menuVisible`, `zoneMe
 (99, 'Add roles', 'modules/users/administration/addRole.php', 1, 6, 3, 2, 0, 0, '07235456649081059126', 1),
 (100, 'Deco', 'modules/securiter/deconnexion.php', 1, 0, 20, 3, 1, 0, '64550679919', 1),
 (101, 'Profil', 'modules/users/administration/profilUser.php', 1, 0, 19, 3, 1, 0, '766233770410', 1),
+(104, 'cgu', 'modules/cgu/cgu.php', 0, 0, 0, 1, 1, 0, '8136843676556156', 1),
 (136, 'cgu', 'modules/cgu/cgu.php', 0, 0, 0, 0, 1, 0, '81368436765', 1),
 (137, 'cguUser', 'modules/cgu/cgu.php', 0, 0, 0, 1, 1, 0, '05454952064666', 1),
 (138, 'cguUser', 'modules/cgu/cgu.php', 0, 0, 0, 3, 1, 0, '1866765962915445', 1),
 (140, 'Lost Password', 'modules/users/administration/lostPassword.php', 0, 0, 0, 0, 1, 0, '65670654491780', 1),
 (141, 'Inscription', 'modules/users/inscription.php', 1, 0, 1, 0, 1, 0, '44415246762', 1),
-(148, 'Firewall', 'modules/navigation/erreurNav.php', 1, 0, 0, 2, 1, 20, '554683139241', 1),
-(150, 'IP ban panel', 'modules/journaux/ipBanPanel.php', 1, 20, 2, 2, 1, 0, '517485373345237', 1);
+(148, 'Firewall', 'modules/navigation/erreurNav.php', 1, 0, 2, 2, 1, 20, '86369125662566764069', 1),
+(150, 'IP ban panel', 'modules/journaux/ipBanPanel.php', 1, 20, 2, 2, 1, 0, '517485373345237', 1),
+(151, 'Accueil', 'modules/navigation/pageGeneral.php', 1, 0, 0, 0, 1, 0, '5078449774944231', 1),
+(152, 'Accueil', 'modules/navigation/pageGeneral.php', 1, 0, 0, 1, 1, 0, '4985074639116634', 1),
+(153, 'Accueil', 'modules/navigation/pageGeneral.php', 1, 0, 0, 2, 1, 0, '1688252268455738', 1);
 
 -- --------------------------------------------------------
 
@@ -269,7 +279,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`idUser`, `token`, `email`, `prenom`, `nom`, `login`, `mdp`, `valide`, `role`, `dateCreation`) VALUES
-(1, '4OIOpah6Gh', 'christophe.calmes2020@laposte.net', 'Christophe', 'Calmes', 'Admin', '$2y$10$oADkGPsXhTD1m1.vawEEJevfSC1BwODMOuCHCntUrBQgpV5TmLy6S', 1, 2, '2022-06-12 14:26:13');
+(1, 'RtN7kFSX0cubMRSQ', 'christophe.calmes2020@laposte.net', 'Christophe', 'Calmes', 'Admin', '$2y$10$oADkGPsXhTD1m1.vawEEJevfSC1BwODMOuCHCntUrBQgpV5TmLy6S', 1, 2, '2022-06-12 14:26:13'),
+(57, 'w2jbaXpwin', 'christophe.calmes22@gmail.com', 'Christophe', 'Calmes', 'Membre', '$2y$10$XyTgD4YJUyRXmYb5rJ7IGeCw5c..lxXVGNCEw2XdpS6GOtOfzvGfW', 1, 1, '2024-05-15 14:33:10');
 
 --
 -- Index pour les tables déchargées
@@ -351,7 +362,7 @@ ALTER TABLE `dataSite`
 -- AUTO_INCREMENT pour la table `journaux`
 --
 ALTER TABLE `journaux`
-  MODIFY `idConnexion` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idConnexion` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT pour la table `menuNav`
@@ -369,7 +380,7 @@ ALTER TABLE `modules`
 -- AUTO_INCREMENT pour la table `navigation`
 --
 ALTER TABLE `navigation`
-  MODIFY `idNav` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
+  MODIFY `idNav` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
 
 --
 -- AUTO_INCREMENT pour la table `roles`
@@ -387,7 +398,7 @@ ALTER TABLE `routageForm`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `idUser` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `idUser` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- Contraintes pour les tables déchargées

@@ -73,7 +73,7 @@ private $yes;
       }
     echo '</ul>';
     if($variable[0]['role']== 1){
-      echo '<p>Vous avez accepté les CGU : Coucou</>';
+      echo '<p>Vous avez accepté les CGU :</>';
       echo '<a href="'.findTargetRoute(104).'">Voir les CGU</a>';
     }
   }
